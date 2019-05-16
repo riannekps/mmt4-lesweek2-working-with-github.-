@@ -1,0 +1,1 @@
+console.log("dit is script.js");

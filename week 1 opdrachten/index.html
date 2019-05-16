@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Document</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+</head>
+
+<body>
+    <header class="header1">
+        <nav>
+            <ul>
+                <li><a href="#" id="blackHeading">H2 Oranje</a></li>
+                <li><a href="#" id="fontComicSans">Comic Sans</a></li>
+                <li><a href="#" id="curseWords">Beep</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <article>
+            <header>
+                <h2>Hello world!</h2>
+            </header>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque hendrerit tellus in iaculis
+                pretium. Aliquam erat volutpat.Morbi porttitor, quam in suscipit bibendum, est lorem sodales urna, eu
+                pulvinar arcu dolor venenatis
+                lacus.Maecenas quis eleifend est, id eleifend est. Donec pharetra, felis vel dignissim finibus, sapien
+                enim
+                rhoncus arcu, sed pulvinar lectus quam sed diam. Aliquam finibus imperdiet velit et facilisis. Praesent
+                laoreet, nisl vitae ultricies faucibus, velit elit aliquam massa, in sagittis turpis mauris vel erat.
+                Sed ut arcu non sapien malesuada euismod. Proin quis est eu massa pellentesque pulvinar. Aenean vel
+                velit ipsum.
+            </p>
+            <footer class="footerArticle" id="paragraph2">
+                My money's in that office, right? If she start giving me some <span>bullshit</span> about it ain't there, and we got
+                to go someplace else and get it, I'm gonna shoot you in the head then and there. Then I'm gonna shoot
+                that <span>bitch</span> in the kneecaps, find out where my <span>goddamn</span> money is. She gonna tell me too. Hey, look at me
+                when I'm talking to you, <span>motherfucker</span>.
+            </footer>
+        </article>
+
+        <div id="accordion">
+            <h3>
+                Section 1
+            </h3>
+
+            <div>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque hendrerit tellus in iaculis
+                    pretium. Aliquam erat volutpat.Morbi porttitor, quam in suscipit bibendum, est lorem sodales urna,
+                    eu
+                    pulvinar arcu dolor venenatis
+                    lacus.Maecenas quis eleifend est, id eleifend est.
+                </p>
+            </div>
+
+            <h3>
+                Section 2
+            </h3>
+
+            <div>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque hendrerit tellus in iaculis
+                    pretium. Aliquam erat volutpat.Morbi porttitor, quam in suscipit bibendum, est lorem sodales urna,
+                    eu
+                    pulvinar arcu dolor venenatis
+                    lacus.Maecenas quis eleifend est, id eleifend est.
+                </p>
+            </div>
+
+            <h3>
+                Section 3
+            </h3>
+
+            <div>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque hendrerit tellus in iaculis
+                    pretium. Aliquam erat volutpat.Morbi porttitor, quam in suscipit bibendum, est lorem sodales urna,
+                    eu
+                    pulvinar arcu dolor venenatis
+                    lacus.Maecenas quis eleifend est, id eleifend est.
+                </p>
+            </div>
+
+            <h3>
+                Section 4
+            </h3>
+
+            <div>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque hendrerit tellus in iaculis
+                    pretium. Aliquam erat volutpat.Morbi porttitor, quam in suscipit bibendum, est lorem sodales urna,
+                    eu
+                    pulvinar arcu dolor venenatis
+                    lacus.Maecenas quis eleifend est, id eleifend est.
+                </p>
+            </div>
+        </div>
+
+
+
+        <div class="div1">
+            <img src="img/water@2x.jpg" alt="water">
+        </div>
+
+        <div class="div2">
+            <img src="img/water@2x.jpg" alt="water">
+        </div>
+    </main>
+
+    <footer>
+
+    </footer>
+
+    </main>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+    <script>
+        var fontColor = '#fc8a5d';
+        var fontFamily = "Comic Sans MS";
+
+        $(document).ready(function () {
+            //console.log('hello MAMDT');
+
+            $('#blackHeading').click(function () {
+                $('h2').css({ 'color': fontColor });
+            });
+
+            $('#fontComicSans').click(function () {
+
+                $('body').css({ 'font-family': fontFamily })
+            });
+
+            $("#curseWords").click(function () {
+                
+                $("#paragraph2").text($("#paragraph2").text().replace("bullshit", "beep"));
+                $("#paragraph2").text($("#paragraph2").text().replace("bitch", "beep"));
+                $("#paragraph2").text($("#paragraph2").text().replace("goddamn", "beep"));
+                $("#paragraph2").text($("#paragraph2").text().replace("motherfucker", "beep"));
+            });
+        });
+
+
+    </script>
+    <script>
+        $(function () {
+            $("#accordion").accordion();
+        });
+    </script>
+
+</body>
+
+</html>
